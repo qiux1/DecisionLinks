@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System;
+using System.Collections.Generic;
+class Program
 {
     /// <summary>
     /// A method to find the first non-repeating character in a provided string
@@ -47,6 +49,13 @@
 
     public static void Main(string[] args)
     {
-        
+        Console.WriteLine("Please Enter a word");
+        string input = Console.ReadLine();
+        char? NonRepeatingChar = FindFistNonRepeatingCharacter(input); 
+        if (NonRepeatingChar == null) 
+        {
+            Console.WriteLine("There is no repeating character");
+        }
+        Console.WriteLine(NonRepeatingChar);
     }
 }
