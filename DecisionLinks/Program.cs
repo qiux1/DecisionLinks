@@ -28,6 +28,19 @@
                 map.Add(c, 1);
             }
         }
+
+        //foreach to iterate through input string again to find the first non-repeating character
+        foreach(char c in input)
+        {
+            //if this character value in the map is 1,
+            //it is the first non-repeating character
+            if (map[c] == 1)
+            {
+                //return the character
+                return c;
+            }
+
+        }
         //if there is no non-repeating character from input string
         return null;
     }
