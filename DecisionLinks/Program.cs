@@ -47,6 +47,8 @@ class Program
         return null;
     }
 
+    //use memorization to store the calculated factorials of input numbers
+    private static Dictionary<int, long> factorialMemory= new Dictionary<int, long>();
     /// <summary>
     /// Method to find the Fibonacci number of the input number provided
     /// if the input is negative, it will return null
@@ -55,25 +57,11 @@ class Program
     /// <returns></returns>
     public static long? Factorial(int num)
     {
-        //if the input number is 0, return 1
+        //if the input number is 0 return 1
         if (num == 0)
         {
             return 1;
         }
-        //if the input is positive number
-        else if (num >1) 
-        {
-            //initiate the first fibonacci number which is 1
-            long fibonacci = 1;
-            //use for loop to calculate the fibonacci number
-            for (int i = 1; i <= num; i++)
-            {
-                //fibonacci number is 
-                fibonacci *= i;
-            }
-            return fibonacci;
-        }
-        return null;
     }
 
     public static void Main(string[] args)
