@@ -108,7 +108,25 @@ class Program
         {
             return false;
         }
-       
+        //intitalize a left and right pointer to check the input
+        int left = 0;
+        int right = input.Length - 1;
+
+        //while loop as long as left is less than right
+        while (left < right)
+        {
+            //comapre the chracters at the left pointer and right pointer
+            //return false it is different
+            if (input[left] != input[right])
+            {
+                return false;
+            }
+
+            //increment left pointer by 1 and reduce right pointer by 1
+            left++;
+            right--;
+        }
+        return true;
     }
 
     public static void Main(string[] args)
