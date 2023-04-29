@@ -154,13 +154,13 @@ class Program
             {
                 return middle;
             }
-            //if the value at middle index is bigger than target value
+            //if the value at middle index is less than target value
             else if (nums[middle] < target) 
             {
                 //update the left pointer to be middle + 1
                 left = middle + 1;
             }
-            //if the value at middle index is less than target value
+            //if the value at middle index is greater than target value
             else
             {
                 //update the right pointer to the middle - 1
