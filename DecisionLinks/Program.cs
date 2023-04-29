@@ -55,17 +55,46 @@ class Program
     /// </summary>
     /// <param name="num"></param>
     /// <returns></returns>
-    public static long? Factorial(int num)
+    public static long Factorial(int num)
     {
         //if the input number is 0 return 1
         if (num == 0)
         {
             return 1;
         }
+        // for negative input: if odd, return negative factorial of absolute input value.
+        // if even, return factorial of absolute input value.
+        else if (num < 0) 
+        { 
+            return (num % 2 == 0 ? 1 : -1)* Factorial(Math.Abs(num));
+        }
+        else
+        {
+            //if the input number is previous calculate before
+            //just retrive the number from the dictionary instead of calculating it again
+            if (factorialMemory.ContainsKey(num))
+            {
+                return factorialMemory[num];
+            }
+
+            //calculate the num factorial by using recurssion
+            long factorial = num * Factorial(num - 1);
+
+            //if the number is not stored in the dictionary
+            //add it into the dictionary
+            if (!factorialMemory.ContainsKey(num))
+            {
+                factorialMemory[num] = factorial;
+            }
+
+            return factorial;
+        }
+
     }
 
     public static void Main(string[] args)
     {
+        //testing code for FindFistNonRepeatingCharacter method
         Console.WriteLine("Please Enter a word");
         string input = Console.ReadLine();
         char? NonRepeatingChar = FindFistNonRepeatingCharacter(input); 
@@ -74,5 +103,13 @@ class Program
             Console.WriteLine("There is no repeating character");
         }
         Console.WriteLine(NonRepeatingChar);
+
+        //Teseting code Factorial method
+        Console.WriteLine(Factorial(0));
+        Console.WriteLine(Factorial(1));
+        Console.WriteLine(Factorial(-5));
+        Console.WriteLine(Factorial(7));
+        Console.WriteLine(Factorial(-10));
+        Console.WriteLine(Factorial(12));
     }
 }
