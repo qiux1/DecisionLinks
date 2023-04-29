@@ -148,5 +148,20 @@ class Program
         Console.WriteLine(Factorial(7));
         Console.WriteLine(Factorial(-10));
         Console.WriteLine(Factorial(12));
+
+        //Testing code IsPalidrome method
+        Console.WriteLine(IsPalidrome(null)+ "is False" );
+        Console.WriteLine(IsPalidrome("asdfgfdsa")+ " is True");
+        Console.WriteLine(IsPalidrome("asdfg fdsa") + " is False");
+        Console.WriteLine(IsPalidrome("asdf g fdsa") + " is True");
+        Console.WriteLine(IsPalidrome("asdf g f1dsa") + " is False");
+        Console.WriteLine(IsPalidrome("1asdf g fdsa1")+ " is True");
+        Console.WriteLine(IsPalidrome("as3df g fd1sa") + " is False");
+        Console.WriteLine(IsPalidrome("!as df g fd sa") + " is False");
+        Console.WriteLine(IsPalidrome("!a2s df g fd s2a!") + " is True");
+        Console.WriteLine(IsPalidrome("!a2s df gg fd s2a!") + " is True");
+        Console.WriteLine(IsPalidrome("!a2s df g@g fd s2a!") + " is True");
+        Console.WriteLine(IsPalidrome("!a2s df g@g fd s2b!") + " is False");
+        Console.WriteLine(IsPalidrome(" !a2s df g@g fd s2a! ") + " is True");
     }
 }
