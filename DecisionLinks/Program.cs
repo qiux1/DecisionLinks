@@ -94,7 +94,7 @@ class Program
 
     /// <summary>
     /// Method to check if the input string is Palidrome or not
-    /// This method take into the consideraion of uppercase 
+    /// This method take into the consideration uppercase 
     /// lowercase, special characters, numbers, and whitespace
     /// it will return true if input meets all conditions
     /// else return false
