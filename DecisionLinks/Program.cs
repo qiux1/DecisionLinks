@@ -92,6 +92,20 @@ class Program
 
     }
 
+    /// <summary>
+    /// Method to check if the input string is Palidrome or not
+    /// This method take into the consideraion of uppercase 
+    /// lowercase, special characters, numbers, and whitespace
+    /// it will return true if input meets all conditions
+    /// else return false
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
+    public static bool IsPalidrome(string input)
+    {
+        
+    }
+
     public static void Main(string[] args)
     {
         //testing code for FindFistNonRepeatingCharacter method
