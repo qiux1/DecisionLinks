@@ -155,7 +155,7 @@ class Program
                 return middle;
             }
             //if the value at middle index is bigger than target value
-            else if (nums[middle] > target) 
+            else if (nums[middle] < target) 
             {
                 //update the left pointer to be middle + 1
                 left = middle + 1;
@@ -206,5 +206,15 @@ class Program
         Console.WriteLine(IsPalidrome("!a2s df g@g fd s2a!") + " is True");
         Console.WriteLine(IsPalidrome("!a2s df g@g fd s2b!") + " is False");
         Console.WriteLine(IsPalidrome(" !a2s df g@g fd s2a! ") + " is True");
+
+        //Testing code BinarySearch method
+        int[] nums1 = { 1, 2, 3, 5, 6, 7, 8, 10, 11 };
+        Console.WriteLine(BinarySearch(nums1, 0));
+        Console.WriteLine(BinarySearch(nums1, 1));
+        Console.WriteLine(BinarySearch(nums1, 4));
+        Console.WriteLine(BinarySearch(nums1, 5));
+        Console.WriteLine(BinarySearch(nums1, 9));
+        Console.WriteLine(BinarySearch(nums1, 11));
+        Console.WriteLine(BinarySearch(nums1, 20));
     }
 }
