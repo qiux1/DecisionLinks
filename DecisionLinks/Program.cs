@@ -103,7 +103,12 @@ class Program
     /// <returns></returns>
     public static bool IsPalidrome(string input)
     {
-        
+        //it is false if the input value is null
+        if (input == null)
+        {
+            return false;
+        }
+       
     }
 
     public static void Main(string[] args)
