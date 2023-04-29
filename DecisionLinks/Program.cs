@@ -139,7 +139,37 @@ class Program
     /// <returns></returns>
     public static int BinarySearch(int[] nums, int target)
     {
+        //initialize left and right pointer
+        int left = 0;
+        int right = nums.Length - 1;
 
+        //while loop to iterate through the nums array as long as left is less equal than right pointer
+        while (left <= right)
+        {
+            //find the middle index between left and right pointer
+            int middle = left + (right - left)/2;
+            //if the value at the middle index is equal to target value
+            //return the index value to middle
+            if (nums[middle] == target)
+            {
+                return middle;
+            }
+            //if the value at middle index is bigger than target value
+            else if (nums[middle] > target) 
+            {
+                //update the left pointer to be middle + 1
+                left = middle + 1;
+            }
+            //if the value at middle index is less than target value
+            else
+            {
+                //update the right pointer to the middle - 1
+                right = middle - 1;
+            }
+        }
+
+        //if cannot find the target in the nums array, return -1
+        return -1;
     }
 
     public static void Main(string[] args)
