@@ -128,6 +128,19 @@ class Program
         }
         return true;
     }
+    /// <summary>
+    /// Implement Binary Search method to find the target integer
+    /// from an array of integer provided
+    /// return the index of the target value if it is in input array
+    /// else return -1
+    /// </summary>
+    /// <param name="input"></param>
+    /// <param name="target"></param>
+    /// <returns></returns>
+    public static int BinarySearch(int[] nums, int target)
+    {
+
+    }
 
     public static void Main(string[] args)
     {
