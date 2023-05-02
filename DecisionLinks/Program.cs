@@ -6,10 +6,11 @@ class Program
     /// A method to find the first non-repeating character in a provided string
     /// return null if the input does not have a non-repeating character
     /// else return the first non-repeating character
+    /// S:O(N) T:O(N)
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
-    public static char? FindFistNonRepeatingCharacter(string input)
+    public static char? FindFirstNonRepeatingCharacter(string input)
     {
         //use dictonary to store the frequence of each character from input string
         Dictionary<char, int> map = new Dictionary<char, int>();
@@ -52,6 +53,7 @@ class Program
     /// <summary>
     /// Method to find the Fibonacci number of the input number provided
     /// if the input is negative, it will return null
+    /// T:O(n) S:O(N)
     /// </summary>
     /// <param name="num"></param>
     /// <returns></returns>
@@ -98,6 +100,7 @@ class Program
     /// lowercase, special characters, numbers, and whitespace
     /// it will return true if input meets all conditions
     /// else return false
+    /// T:O(N) S:O(1)
     /// </summary>
     /// <param name="input"></param>
     /// <returns></returns>
@@ -133,6 +136,7 @@ class Program
     /// from an array of integer provided
     /// return the index of the target value if it is in input array
     /// else return -1
+    /// TLO(logn) S:O(1)
     /// </summary>
     /// <param name="input"></param>
     /// <param name="target"></param>
@@ -177,7 +181,7 @@ class Program
         //testing code for FindFistNonRepeatingCharacter method
         Console.WriteLine("Please Enter a word");
         string input = Console.ReadLine();
-        char? NonRepeatingChar = FindFistNonRepeatingCharacter(input); 
+        char? NonRepeatingChar = FindFirstNonRepeatingCharacter(input); 
         if (NonRepeatingChar == null) 
         {
             Console.WriteLine("There is no repeating character");
